@@ -35,7 +35,7 @@ class ComentariosActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         _id=intent.getStringExtra("_id")
         descripcion=intent.getStringExtra("descripcion")
-        //nick=intent.getStringExtra("nick")
+        setTitle(descripcion)
         loadComentarios()
     }
 
@@ -56,6 +56,7 @@ class ComentariosActivity : AppCompatActivity() {
     }
 
     private fun showComentarios() {
+        Log.d("Paco",comentariosAl.get(0).toString())
         adapter = CustomAdapterComentarios(this,R.layout.comentariosrow, comentariosAl )
         rvComentarios.layoutManager = LinearLayoutManager(this)
         rvComentarios.adapter = adapter
