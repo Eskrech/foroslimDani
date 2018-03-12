@@ -36,7 +36,7 @@ class CustomAdapterComentarios (val context: Context,
         fun bind(dataItem: Comentario, position: Int){
             itemView.tvComentario.text= dataItem.post
             itemView.tvFecha.text = dataItem.fecha
-            //itemView.tvNick.text = dataItem.nick
+            itemView.tvNick.text = dataItem.nick
             itemView.setOnClickListener({
                 onItemClick(dataItem)
             })

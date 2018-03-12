@@ -13,7 +13,7 @@ import rx.Observable
  */
 interface ApiComentariosForo {
     @GET("tema/{tema}/comentarios")
-    fun getData(@Path("tema") tema:String): Observable<Respuesta> /////////Necesito pasarle el nick
+    fun getData(@Path("tema") tema:String): Observable<Respuesta>
 
     companion object {
         fun create(): ApiComentariosForo {
